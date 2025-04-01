@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+:root {
+  --orange: #df9146;
+  --dark: #18191e;
+  --dark-light: #303035;
+  --gray-light: #838896;
+  --gray: #26272b;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--dark);
+  font-family: "Nunito", sans-serif;
+}
+
+.main__header {
+  padding: 12px;
+  background-color: var(--dark-light);
+}
+
+.main__header__nav {
+  width: 98%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container__logo__promad {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: var(--dark);
+}
+
+.logo__promad {
+  height: 48px;
+}
+
+.menu__hamburguer {
+  cursor: pointer;
+  height: 12px;
+}
+
+.main__content {
+  padding: 32px 0;
+}
+
+.header__list__clients {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list__clients__title {
+  color: var(--white);
+}
+
+.btn {
+  cursor: pointer;
+  height: 34px;
+  border-radius: 8px;
+}
+
+.btn-primary {
+  width: 108px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  background-color: var(--orange);
+  color: white;
+}
+
+.body__list__clients {
+  padding: 16px 0;
+  width: 40%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.card__client {
+  border: 2px solid var(--dark-light);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.card__client__name {
+  color: var(--white);
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.card__client__email,
+.card__client__telefone {
+  color: var(--gray-light);
+  font-weight: 200;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.container__register__client__form {
+  width: 40%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.container__input {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--dark-light);
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.form__client__input {
+  width: 100%;
+  background-color: transparent;
+  border: transparent;
+  padding-left: 8px;
+  color: var(--gray-light);
+}
+
+.header__descripton__options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.container__form__title {
+  color: var(--white);
+}
+
+.container__form__subtitle {
+  color: var(--gray-light);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.client__link {
+  color: var(--orange);
+}
+
+.btn-submit {
+  width: 100%;
+  height: 48px;
+  background-color: var(--orange);
+  font-size: 16px;
+  color: var(--white);
+  border-radius: 8px;
+  border: transparent;
+  cursor: pointer;
+}
+
+.main__content__register {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.no-clients-message{
+  margin: 32px 0;
+  color: var(--gray-light);
+  text-align: center;
+  padding: 12px 0;
+  border-top: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-light);
+}

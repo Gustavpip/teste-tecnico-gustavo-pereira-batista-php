@@ -1,0 +1,15 @@
+{
+    "name": "gustavobatista/promad",
+    "description": "Projeto teste técnico",
+    "require": {
+        "php": "^8.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gustavo",
+            "email": "gustavobatistadev@email.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
