@@ -13,7 +13,7 @@ git clone https://github.com/Gustavpip/teste-tecnico-gustavo-pereira-batista-php
 cd teste-tecnico-gustavo-pereira-batista-php
 ```
 
-### 3. Subir os containers com Docker
+### 2. Subir os containers com Docker
 
 O projeto depende de um banco de dados PostgreSQL. Para subir os containers necessários, execute:
 
@@ -21,14 +21,14 @@ O projeto depende de um banco de dados PostgreSQL. Para subir os containers nece
 docker compose up -d
 ```
 
-### 5. Rodar as Migrações
+### 3. Rodar as Migrações
 
 ```bash
 php src/migrations/create_clients_table.php up
 php src/migrations/create_logs_table.php up
 ```
 
-### 6. Iniciar o Servidor
+### 4. Iniciar o Servidor
 
 ```bash
 php -S localhost:8000
