@@ -4,7 +4,7 @@ require_once __DIR__ . '/../interfaces/interfaces.php';
 class ClientController {
     private $clientService;
 
-    public function __construct(ClientServiceInterface $clientService) {
+    public function __construct(IClientServiceInterface $clientService) {
         $this->clientService = $clientService;
     }
 

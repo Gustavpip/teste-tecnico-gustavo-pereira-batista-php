@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../Database.php';
 require_once __DIR__ . '/../interfaces/interfaces.php';
 
-class ClientRepository implements ClientRepositoryInterface {
+class ClientRepository implements IClientRepositoryInterface {
     private $pdo;
 
     public function __construct() {

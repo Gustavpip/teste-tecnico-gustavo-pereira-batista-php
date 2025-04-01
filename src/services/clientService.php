@@ -2,11 +2,11 @@
 require_once __DIR__ . '/../interfaces/interfaces.php';
 require_once __DIR__ . '/./logService.php';
 
-class ClientService implements ClientServiceInterface {
+class ClientService implements IClientServiceInterface {
     private $clientRepository;
     private $logService;
 
-    public function __construct(ClientRepositoryInterface $clientRepository, LogService $logService) {
+    public function __construct(IClientRepositoryInterface $clientRepository, LogService $logService) {
         $this->clientRepository = $clientRepository;
         $this->logService = $logService;
     }

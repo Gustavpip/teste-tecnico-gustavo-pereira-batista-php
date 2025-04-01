@@ -1,12 +1,12 @@
 <?php
 
-interface ClientRepositoryInterface {
+interface IClientRepositoryInterface {
     public function getAllClients();
     public function createClient($nome, $telefone, $email);
 }
 
-interface ClientServiceInterface {
-    public function __construct(ClientRepositoryInterface $clientRepository, LogService $logService);
+interface IClientServiceInterface {
+    public function __construct(IClientRepositoryInterface $clientRepository, LogService $logService);
     public function getAllClients();
     public function registerClient(string $nome, string $telefone, string $email);
 }
