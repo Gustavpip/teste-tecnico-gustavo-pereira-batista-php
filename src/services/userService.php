@@ -23,13 +23,18 @@ class UserService implements IUserService {
         }
 
         $statusCode = curl_getinfo($this->client, CURLINFO_HTTP_CODE);
+
         if ($statusCode != 200) {
             echo "Erro HTTP: " . $statusCode;
             return null;
         }
 
         $data = json_decode($response, true);
-        return $data ?: null;
+
+        return $data ? [
+            'statusCode' => $statusCode,
+            'data' => $data
+        ] : null;
     }
 
     public function __destruct() {

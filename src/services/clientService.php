@@ -24,7 +24,7 @@ class ClientService implements IClientServiceInterface {
         $clientIp = $_SERVER['REMOTE_ADDR'];
     
         $this->logService->generate($userAgent, $clientIp);
-        // echo $userAgent;
+
         return $this->clientRepository->createClient($nome, $telefone, $email);
     }
 }

@@ -13,17 +13,23 @@ class LogService implements ILogService {
     }
 
     public function generate(string $userAgent, string $clientIp): ?array {
+        
+        $UNKNOWN_TEXT = 'UNKNOWN';
+        
+        $statusCode = $this->userService->getAll()['statusCode'];
     
         $users = $this->userService->getAll();
+        $users = $users['data']['results'];
+        
         $log = [];
+    
+        if (isset($users)) {
 
-        if (isset($users['results'][0])) {
-
-            $user = $users['results'][0];
+            $user = $users[0];
 
             $log = $this->logBuilder
                 ->setUrlChamada('https://randomuser.me/api/')
-                ->setCodigoStatus(200)
+                ->setCodigoStatus($statusCode ? $statusCode : $UNKNOWN_TEXT)
                 ->setResponseBody(json_encode($user))
                 ->setRequestMethod('GET')
                 ->setClientIp($clientIp ?? 'IP não disponível')
@@ -36,7 +42,7 @@ class LogService implements ILogService {
         } else {
             $log = $this->logBuilder
                 ->setUrlChamada('https://randomuser.me/api/')
-                ->setCodigoStatus(404)
+                ->setCodigoStatus($statusCode ? $statusCode : $UNKNOWN_TEXT)
                 ->setResponseBody('{}')
                 ->setRequestMethod('GET')
                 ->setClientIp($clientIp ?? 'IP não disponível')
